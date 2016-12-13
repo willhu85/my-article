@@ -1,8 +1,4 @@
 # 日常整理的技术文章 #
 
-1. [数组的方法][7049b2ac]
-
-  [7049b2ac]: https://segmentfault.com/a/1190000007479267 "array-method"
-2. [package.json的详细介绍][7049b2ac]
-
-  [7049b2ac]: https://segmentfault.com/ "how-to-use-packageJson"
+* [数组的方法](https://segmentfault.com/a/1190000007479267)
+* [如何使用package.json文件](https://segmentfault.com/a/1190000007479267)
