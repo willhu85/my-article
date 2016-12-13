@@ -38,6 +38,8 @@ package.json中有两个字段是必填字段。name字段和version字段。缺
 
 version字段必须可以被node-semver这个模块解析，是个和npm捆绑在一起的包。
 
+这里有关于版本号形式的含义[nodejs中每个版本形式的含义](https://segmentfault.com/a/1190000007787025)
+
 ### description
 
 一段字符串，用来描述这个npm模块的作用，通过npm search的时候回用到。
