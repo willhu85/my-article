@@ -2,6 +2,8 @@
 ### Array 方法
 `var a = [1,2,3,4,5]`
 
+
+
 | 方法 | 用法 | 返回值 | 原数组a  | 说明 |
 | ----- | ---- | ----- | ---- | ---- | ---- |
 | concat |  a.concat(['a','b','c','d','e'])  | [1, 2, 3, 4, 5, "a", "b", "c", "d", "e"] | 不变 |合并两个数组为一个新数组 |
@@ -15,3 +17,5 @@
 | slice | a.slice(start,end) a.slice(1,3) | [2,3] | 不变 | 从a[start]开始，到a[end],结束复制出一个新数组, 无end则end默认为a.length, end<0,则为end = a.length+end |
 | splice |  a.splice(start, deleteCount) a.splice(1,2) | [2,3] | [1,4,5]| 从a中移除多个元素，返回包含移除元素的数组，start为开始位置，deleteCount为移除个数 |
 | splice |  a.splice(start, deleteCount, item...) a.splice(1,2,'yoyo','haha') | [2,3] | [1,'yoyo','haha',4,5] | 从a中移除多个元素，返回包含移除元素的数组，start为开始位置，deleteCount为移除个数, 把插入的item放在start的位置|
+
+
