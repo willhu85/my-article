@@ -2,14 +2,18 @@
 
 <p align="center">![whistle](https://raw.githubusercontent.com/avwo/whistle/master/biz/webui/htdocs/img/whistle.png)
 
-### 简介
+## 简介
  whistle是一款跨平台的网络抓包调试工具，基于node开发。支持抓包，重放，替换，修改等方式来调试http(s),WebSocket和普通的Socket(TCP)请求，也可以作为普通的http代理。其功能和常用的fiddler(windows),Charles(Mac)工具功能相同，不过对于开发者更加友好，操作和调试更加方便，还支持node模块的插件。
  
 基本功能如下
 
 <p aglin="center">![whistle-list](https://raw.githubusercontent.com/avwo/whistleui/master/assets/whistle.png?v=1)
 
-### 安装启动
+## 安装启动
+
+安装启动whistle需要四个步骤安装node,安装whistle,启动whistle,配置代理。
+
+### 安装whistle
 
 官方推荐使用最新的`LTS`版本node。
 node环境配置成功后开始安装whistle，非root用户加`sudo`
@@ -91,14 +95,40 @@ w2 run
 默认端口为8899，如果端口被占用，要修改端口号，可以通过 `-p`来指定新的端口号
 
 **代理方式**
+
 1. 直接配置系统代理
-* Windows
-* Mac
-2. 安装浏览器插件
+    * [Windows](http://jingyan.baidu.com/article/0aa22375866c8988cc0d648c.html)
+    * [Mac](http://jingyan.baidu.com/article/a378c960849144b3282830dc.html)
+2. 安装浏览器代理插件，推荐方式
+    * Chrome插件：[SwitchyOmega](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif)
+    * Firefox插件： [ProxySelector](https://addons.mozilla.org/zh-cn/firefox/addon/proxy-selector/)
+3. 移动端需要配置当前WIFI的代理
 
-### 功能
+## 界面
 
-#### websocket
+通过`w2 start`启动后，访问http://local.whistlejs.com 即可打开whistle界面。
+![图片](media/15162669035942/15204233854650.jpg)
+
+
+## 快速使用
+
+所有通过whistle的篡改操作，都可以用过下面的配置方式实现
+
+
+```
+pattern operatorURL
+```
+pattern为匹配请求URL，支持域名，路径，正则，通配符等多种方式，eg:
+
+
+```
+
+```
+
+
+## 功能
+
+
 #### 设置代理
 #### 反向代理
 #### 移动端调试
@@ -107,6 +137,7 @@ w2 run
 #### 修改请求
 #### 修改相应
 #### socket
+#### websocket
 
 
 
