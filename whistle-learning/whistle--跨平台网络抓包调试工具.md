@@ -1,6 +1,6 @@
 # whistle--跨平台网络抓包调试工具
 
-<p align="center">![whistle](media/15162669035942/15259362357029.png)
+![whistle](media/15162669035942/15259362357029.png)
 
 
 [TOC]
@@ -397,6 +397,7 @@ jd.com method://post
 
 ######修改请求头
 修改请求头，配置方式：
+
 ```
 pattern reqHeaders://filepath
 jd.com reqHeaders://{reqHeaders.json}
@@ -404,17 +405,20 @@ jd.com reqHeaders://{reqHeaders.json}
 ######修改请求内容
 
 把指定的内容替换请求内容(GET等请求没有内容没有替换一说)，配置方式
+
 ```
 pattern reqBody://filepath
 www.jd.com method://post reqBody://{test-reqBody.html}
 ```
 ######注入或替换内容
 把指定的内容添加到请求内容前面(GET等请求没有内容无法添加)，配置方式：
+
 ```
 pattern reqPrepend://filepath
 ```
 ######限速或者延迟请求
 延迟请求
+
 ```
 pattern reqDelay://timeMS
 www.jd.com reqDelay://3000
@@ -440,12 +444,13 @@ jd.com statusCode://404
 ######修改响应内容
 
 把指定的内容替换响应内容(304等响应没有内容无法替换)，配置方式：
+
 ```
 pattern resBody://filepath
 st.360buyimg.com/m/css/2014/layout/layout2015.css resBody://{myAppend.css}
 ```
 
-#####注入或者替换内容
+######注入或者替换内容
 把指定的内容追加到响应内容后面(304等响应没有内容无法追加)，配置方式：
 
 ```
@@ -455,6 +460,7 @@ st.360buyimg.com/m/css/2014/layout/layout2015.css resAppend://{myAppend.css}
 
 #####限制速度或延迟响应
 延迟响应
+
 ```
 pattern resDelay://timeMS
 www.jd.com resDelay://3000
