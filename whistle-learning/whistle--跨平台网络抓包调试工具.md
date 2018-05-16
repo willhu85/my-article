@@ -185,7 +185,7 @@ pattern proxy://ip:port
 pattern proxy://username:password@ip:port
 www.jd.com proxy://test:123@127.0.0.1:8888
 ```
-#####设置socks代理
+##### 设置socks代理
 
 ```
 pattern socks://ip:port
@@ -195,7 +195,7 @@ pattern socks://username:password@ip:port
 www.jd.com socks://test:123@127.0.0.1:8888
 ```
 
-#####设置pac代理
+##### 设置pac代理
 
 ```
 pattern pac://filepath
@@ -203,7 +203,7 @@ pattern pac://filepath
 /./ pac://https://raw.githubusercontent.com/imweb/node-pac/master/test/scripts/normal.pac
 ```
 
-#####设置反向代理
+##### 设置反向代理
 区别于正向代理，具体可参考 [正向代理与反向代理](https://www.cnblogs.com/Anker/p/6056540.html)
 whistle作为反向代理只支持http访问，启动whistle时设置监听的端口为6060:
 
@@ -257,7 +257,7 @@ whistle集成了weinre的功能，只需要简单配置`pattern weinre://id`即�
 2. 无法查看和修改页面的DOM和样式
 3. 无法debug
 
-######1.来捕获页面的错误和log
+###### 1.来捕获页面的错误和log
 
 whistle可以通过类似console的log平台，来捕获页面的错误和log
 
@@ -274,7 +274,7 @@ www.jd.com log://{log-test.js}
 
 ![log-test](http://7xiqdg.com1.z0.glb.clouddn.com/15239363346151.jpg)
 
-######2.查看、修改页面的DOM和样式
+###### 2.查看、修改页面的DOM和样式
 
 集成了weinre的功能，用户只需通过简单配置(pattern weinre://id)即可使用即可通过在pc上通过weinre修改网页的DOM结构及其样式,这里的ID只是一个分类，避免一个weinre调试页面出现太多链接
 
@@ -285,7 +285,7 @@ m.jd.com weinre://test-weinre
 ![test-weinre](http://7xiqdg.com1.z0.glb.clouddn.com/15239373901685.jpg)
 
 
-######3. 暂不支持debug功能,可以通过log来替代
+###### 3. 暂不支持debug功能,可以通过log来替代
 
 推荐腾讯的vConsole插件
 
@@ -323,7 +323,7 @@ demo: [vConsole](http://wechatfe.github.io/vconsole/demo.html)
 
 ##### 请求和响应修改
 
-######修改请求URL或者参数
+###### 修改请求URL或者参数
 
 设置静态规则列表
 
@@ -346,7 +346,7 @@ patternN operatorURIN
 www.jd.com reqScript://{rulelist.js}
 ```
 
-######设置服务器IP(host)
+###### 设置服务器IP(host)
 支持两种配置方式，这样就不用查找本机的host文件了
 
 ```
@@ -381,13 +381,13 @@ host://www.qq.com:8080 a.example.com b.example.com c.example.com
 127.0.0.1:8080 $example.com/test # 等价于： $example.com/test 127.0.0.1：8080
 127.0.0.1:8080 $http://example.com:5555/index.html $www.example.com:6666 $https://www.test.com/test
 ```
-######替换请求
+###### 替换请求
 
 ```
 https://jd.com https://baidu.com/
 ```
 
-######修改请求方法
+###### 修改请求方法
 配置方式如下：
 
 ```
@@ -395,14 +395,14 @@ pattern method://newMethod
 jd.com method://post
 ```
 
-######修改请求头
+###### 修改请求头
 修改请求头，配置方式：
 
 ```
 pattern reqHeaders://filepath
 jd.com reqHeaders://{reqHeaders.json}
 ```
-######修改请求内容
+###### 修改请求内容
 
 把指定的内容替换请求内容(GET等请求没有内容没有替换一说)，配置方式
 
@@ -416,7 +416,7 @@ www.jd.com method://post reqBody://{test-reqBody.html}
 ```
 pattern reqPrepend://filepath
 ```
-######限速或者延迟请求
+###### 限速或者延迟请求
 延迟请求
 
 ```
@@ -430,18 +430,18 @@ pattern reqSpeed://kbs
 www.jd.com reqSpeed://3
 ```
 
-######修改相应状态码
+###### 修改相应状态码
 设置响应状态码(状态码范围100~999)，请求会直接根据设置的状态码返回，不会请求到线上，配置方式：
 
 ```
 pattern statusCode://code
 jd.com statusCode://404
 ```
-######修改响应头
+###### 修改响应头
 
 方式同请求头
 
-######修改响应内容
+###### 修改响应内容
 
 把指定的内容替换响应内容(304等响应没有内容无法替换)，配置方式：
 
@@ -450,7 +450,7 @@ pattern resBody://filepath
 st.360buyimg.com/m/css/2014/layout/layout2015.css resBody://{myAppend.css}
 ```
 
-######注入或者替换内容
+###### 注入或者替换内容
 把指定的内容追加到响应内容后面(304等响应没有内容无法追加)，配置方式：
 
 ```
@@ -458,7 +458,7 @@ pattern resAppend://filepath
 st.360buyimg.com/m/css/2014/layout/layout2015.css resAppend://{myAppend.css}
 ```
 
-#####限制速度或延迟响应
+##### 限制速度或延迟响应
 延迟响应
 
 ```
