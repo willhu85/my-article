@@ -1,0 +1,53 @@
+{
+    "reqId": "1521453442031-952",
+    "startTime": 1521453442034,
+    "dnsTime": 1521453442036,
+    "requestTime": 1521453442038,
+    "responseTime": 1521453442104,
+    "endTime": 1521453442106,
+    "url": "http://jd.com/",
+    "method": "GET",
+    "httpVersion": "1.1",
+    "clientIp": "127.0.0.1",
+    "reqSize": 0,
+    "reqHeaders": {
+        "host": "jd.com",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "accept-encoding": "gzip",
+        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,ja;q=0.6",
+        "cookie": "_AIRLINE_VALUE_=\"yc+6oyyxsb6pLDIwMTctMTAtMjMsMSxPVw==\"; pinId=htbKj_1VRnMoubRu0u5d8xHGIF6nqTqT; pin=820494553_677537774; unick=willhu85; _tp=DzShzbEC2JmIVZps%2BvlnLoe%2FxT3YsAP8BSEubqNUtyE%3D; _pst=820494553_677537774; ceshi3.com=201; mba_muid=15135652528572004706667; spsales_user=_Iw-rjrqwkmsMABr2Tp_i6G83XLqwHwy0Lm9NwaUBMZOAokfQdmQjR1TL-MakRPrLIz9Dg..; ExpirePage=http://hcm.jd.com/psp/HCMPRD/; PS_LOGINLIST=http://hcm.jd.com/HCMPRD; PS_TOKEN=qgAAAAQDAgEBAAAAvAIAAAAAAAAsAAAABABTaGRyAk4Acwg4AC4AMQAwABQDRUlvQbGOYDfjrAJpDQQmQAx06moAAAAFAFNkYXRhXnicK2ZgYGBhZmJkBNJ7mBjAQCiDoZShnCGVIRNKGjOwRTF4MAQz8AUACTeGEIZ4IDeIwcSIwYDBkMGCQRdM6wKxIZhtxqAH1GQCJE2AsnpAbAJWYcZgxMAAAC9wDWk=; email.jd.com=90F0B98F5231E7E840093EEC771DB3F7A1C6746638144AA70C1ADFE90B099840B3BDF0F83794E352A4C210B22DBD32F5A0955120FCBFFDB43507EED8D1CC3009B8A4023595A5D70F7C00A97ECE28BE579CA5128F369A21B1FB8BE0EFDA7CCB5D7773F30B246075BDA840DD3A5DF68B40389D6776; EBSAuthCookie=34126|||N; jd_ebs_ssoproxy=success; jd_erp_preAuthCookie=27e3c491da504cbcb52a5fc5bcb8702c; PROD=8gJCXRhpNvVZinoUy2AmbF7A7C; ipLoc-djd=2-2815-51975-0; ipLocation=%u4E0A%u6D77; pshcmweb-80-PORTAL-PSJSESSIONID=CTHbu9Y4XBzcNyvoyoNwR4Bmj9m6Rgpt!94079683; PS_TOKENEXPIRE=28_Feb_2018_09:28:35_GMT; wxmall_ptype=4; retina=0; cid=3; webp=1; sc_width=1920; shshshfp=ff57c9486c7a052a4ae42d98bd64fd6c; shshshfpa=34e94dac-8fa3-6e22-2186-42a95d5a31e0-1519893413; shshshfpb=17ea609a745f645718f91bb55e834e199202f6185756e24d15a97bba5f; mobilev=html5; visitkey=50277296709101724; __wga=1520232606348.1520232606348.1519893413172.1519893413172.1.2; unpl=V2_ZzNtbUIDERdzXBEEfB8JVWILGlkSBBMdc1hOVSgRWQFnV0JYclRCFXwUR1ZnGFUUZwQZWEdcRxJFCEVkexhdBGIBFllEXnMldDhFVEsZbAVjAxBZRVNAEXYBQlJ4GF0AYQIVWkVRcyVyOE9SehFbDVdeVgMKEx5LKl5HVXIpXwdjAxNtQ2dDFHwIR1dyGl0EV1V8XUNWQhR0CENXe1RcAWcBFlpGVEcWfAxAV3oYWQNmBBVaRGdKE3QAQVxLGg%3d%3d; CCC_SE=ADC_JjwtnMHXGNEldHVJZJF%2fJlfsR9FXCVJQ23%2f7a9xWuMvoi9DtRkIaUW3R8%2f%2ba9OQ7L%2bO9RY%2fPy3F0yubroUQftPjXJFvkuNvGz6Op8pFVng%2fpHUe1eUf22M58mpZ94loAXgKyvSdevtMjM3Q2H9wnN8kDbVMVVSTg6XekEDa9rdsg10qGvHFtWDCR9ORQAcL%2f7jSPU121C8y1zh6%2fVUjOEUgQbytNmmR9xWCWH1k%2bt8110LydGjbS8n%2bxXOzyl1XROSyjsH9SpInciaXl8E07FdkNqfndotQI86x8UCem83s9VKWsiwSSskO%2bTIWs9SR%2bpQZZ5kvCx8WiFypZodJk3n8aLvpQFQMO3TByjznxlcwo%2foNmhG4y%2fUFTLXgmuWzIa5RfLsGHCKQDXo%2bcvpAr0uNVcU4ZlTwwleH%2ftr7MsKAQfI%2frO%2bQejsd99kfZgHhyFOEPBIST7mqJiqac33l0dgARqPtMR98iMXwQaTGVAKITJEUDa1LFutA9Y%2f%2bsTxzDXL8KPgN3OiZv%2fM5isedIKhPKs%2bzy2bGvh%2fk8PhckUaF5b92FEE%2fIJcBwbkkVcRb%2f62fVdcVaz4cr9GVQB3Iao7D%2f5kzlwrQSirzhvD0GxdyVHWqQA3gxNAVki6AiLGb78SwFeCbfbW%2bKSxKuZzBpC2Jdb%2bqUVtQvJNKv9aQsXM2qT7TeFe94IUe9NhIwPvA7WVTLbkjKZwA1wM5ySMms5Vd5i0zZmp3og6QbPiq5GFwBWGfsuHBEbNSor8z7YZv9; __jdv=122270672|link.zhihu.com|t_1000435578_|tuiguang|1ec37efa67da4995aba97a90b9451ea4|1520498697236; user-key=2902cf1c-f8d3-4197-a61a-84730b2621a8; _jrda=14; wlfstk_smdl=a7qiv7tkqgb7wy4a2g1dz7vsc4h9masx; TrackID=1LQinGqVLIaUAjpQS21dU3O7vdDNAl4Q30cIiuCLJSrQzJN1sn34YACY6P1VfF3835k9s40ikQVqvT4Kuy3eBhNcV0DuBjc_GqJS4khWDblFKwLJHiWQwYXOktwbNebi-iA9fj6KsrRzEj8Gic2TIqQ; yl_pcpc=2xUcMuTKW4ci_swiu6QDtooVaHkC73f_m7rN3STL5Qp3KjrsFjCOz6YcdVlgcfbzSNjOe8kpvW3snfyRWpBaJg%3D%3D; mt_xid=V2_52007VwMWUl9cVV4cTRpVAWEAE1NYXlNdGE4fbAxmBhVaXFpTRh5JGgwZYgRCV0FRVw5MVU4JBGABFAFUWVBeS3kaXQVuHxNQQVhXSx9IEl4BbAMRYl1oUmoaTRhbBmYzEFZcWg%3D%3D; __jdu=15135652528572004706667; 3AB9D23F7A4B3C9B=EOY24NMQF4ITMW43TL2L2AOFP5XWDR6NMILM26BEOZJVUD55Y3DPEJZGLOPSLH55QYXKZRWYYMFGIM5H6VD5GKF2HQ; __jdc=122270672; cn=0; areaId=2; PCSYCityID=2; __jda=122270672.15135652528572004706667.1513565253.1521431732.1521440146.261; sid=bd9cb102c864f75cc6632eda0ac3e7c4; erp1.jd.com=37571645BE0B1C4032E717F4DE876C8DEB33CD7D6F2824F2C3E1F7D677C6C5822917FFCBACA563926B855A485F9036ED5F223E4E5C13DE707840895A7E2F669D94D0324726BDB3542C75DBB083ABB4D3; sso.jd.com=1d212c8deb474b61a6261a7db0fecfab",
+        "connection": "keep-alive"
+    },
+    "reqBody": "",
+    "reqTrailers": {},
+    "statusCode": 302,
+    "hostIp": "106.39.167.118",
+    "resSize": 165,
+    "resHeaders": {
+        "server": "JengineD/1.7.2.1",
+        "date": "Mon, 19 Mar 2018 09:57:22 GMT",
+        "content-type": "text/html",
+        "content-length": "165",
+        "location": "http://www.jd.com",
+        "connection": "keep-alive"
+    },
+    "resBody": "",
+    "resTrailers": {},
+    "rules": {
+        "exports": {
+            "files": null,
+            "url": "exports:///Users/willhu/work/whistle-test/export.txt",
+            "rawPattern": "jd.com",
+            "isDomain": true,
+            "raw": "jd.com exports:///Users/willhu/work/whistle-test/export.txt",
+            "matcher": "exports:///Users/willhu/work/whistle-test/export.txt",
+            "pattern": "jd.com/",
+            "protocol": null,
+            "isRegExp": false,
+            "name": "exports",
+            "not": false
+        }
+    }
+}

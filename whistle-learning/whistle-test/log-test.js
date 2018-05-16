@@ -1,0 +1,1 @@
+console.log('本地加载的log-test.js')

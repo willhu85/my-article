@@ -6,7 +6,7 @@
 [TOC]
 
 ## 简介
- [whistle](https://github.com/avwo/whistle)是一款跨平台的网络抓包调试工具，基于node开发。支持抓包，重放，替换，修改等方式来调试http(s),WebSocket和普通的Socket(TCP)请求，也可以作为普通的http代理。其功能和常用的fiddler(windows),Charles(Mac)工具功能相同，不过对于开发者更加友好，操作和调试更加方便，还支持node模块的插件。
+ [whistle](https://github.com/avwo/whistle)是一款跨平台的网络抓包调试工具，基于node开发。支持抓包，重放，替换，修改等方式来调试http(s),WebSocket请求，也可以作为普通的http代理。其功能和常用的fiddler(windows),Charles(Mac)工具功能相同，不过对于开发者更加友好，操作和调试更加方便，还支持node模块的插件。
  
 
 ## 快速上手
@@ -19,7 +19,7 @@ npm install -g whistle // 全局安装whistle
 ```js
 w2 start  //启动whistle
 ```
-### 配置代理
+### 配置代理 (推荐使用浏览器插件)
 ```
 127.0.0.1:8899
 ```
@@ -105,7 +105,7 @@ w2 stop
 ```js
 w2 stop
 ```
-启动调试模式（启动了一个前台服务）
+启动调试模式（启动了一个前台服务,主要用于查看whistle的异常及插件开发）
 
 ```
 w2 run
@@ -142,20 +142,24 @@ pattern为匹配请求URL，支持域名，路径，正则，通配符等多种�
 
 operatorURI为对应的操作，由协议和值组成（operatorURL = opProtocol://opValue）
 支持的协议类型：[协议列表](http://wproxy.org/whistle/rules/)
-eg:
+
+PS; {value} 则对应工具栏Values下的文件
+
+
+两边结合一下：
 
 ```
 # 域名匹配IP
  www.example.com  127.0.0.1
  # 带端口的域名匹配
- www.example.com:6666
+ www.example.com:6666  127.0.0.1
  # 带协议的域名，支持：http、https、ws、wss、tunnel
- http://www.example.com
+ http://www.example.com  127.0.0.1
 
  # 路径匹配，同样支持带协议、端口
- www.example.com/test
- https:/www.exapmle.com/test
- https:/www.exapmle.com:6666/test
+ www.example.com/test  http://127.0.0.1:9090
+ https:/www.exapmle.com/test http://127.0.0.1:9090
+ https:/www.exapmle.com:6666/test  http://127.0.0.1:9090
 
  # 正则匹配
  /^https?://www\.example\.com\/test/(.*)/ referer://http://www.test.com/$1
@@ -179,7 +183,6 @@ whistle功能概括：
 pattern proxy://ip:port
 # 加用户名密码
 pattern proxy://username:password@ip:port
-
 www.jd.com proxy://test:123@127.0.0.1:8888
 ```
 #####设置socks代理
@@ -291,6 +294,8 @@ m.jd.com js:///Users/willhu/work/whistle-test/vconsole.min.js
 ```
 vConsole: https://github.com/Tencent/vConsole
 
+demo: [vConsole](http://wechatfe.github.io/vconsole/demo.html)
+
 
 #### 文件导入导出
 
@@ -302,13 +307,13 @@ vConsole: https://github.com/Tencent/vConsole
 
 在network中可以看到每条请求的详细情况。
 
-![nwtwork](media/15162669035942/15239485540063.jpg)
+![network](media/15162669035942/15239485540063.jpg)
 
 ##### 重放请求
 
 打开network ==> 选中请求 ==> 右键选择replay
 
-![replay](media/15162669035942/15239478785805.jpg)
+![replay-w433](media/15162669035942/15239478785805.jpg)
 
 *重构请求*
 
@@ -342,7 +347,7 @@ www.jd.com reqScript://{rulelist.js}
 ```
 
 ######设置服务器IP(host)
-支持两种配置方式
+支持两种配置方式，这样就不用查找本机的host文件了
 
 ```
 ip pattern
@@ -376,33 +381,39 @@ host://www.qq.com:8080 a.example.com b.example.com c.example.com
 127.0.0.1:8080 $example.com/test # 等价于： $example.com/test 127.0.0.1：8080
 127.0.0.1:8080 $http://example.com:5555/index.html $www.example.com:6666 $https://www.test.com/test
 ```
+######替换请求
 
-#####修改请求方法
+```
+https://jd.com https://baidu.com/
+```
+
+######修改请求方法
 配置方式如下：
 
 ```
 pattern method://newMethod
 jd.com method://post
 ```
-#####修改请求头
+
+######修改请求头
 修改请求头，配置方式：
 ```
 pattern reqHeaders://filepath
 jd.com reqHeaders://{reqHeaders.json}
 ```
-#####修改请求内容
+######修改请求内容
 
 把指定的内容替换请求内容(GET等请求没有内容没有替换一说)，配置方式
 ```
 pattern reqBody://filepath
 www.jd.com method://post reqBody://{test-reqBody.html}
 ```
-#####注入或替换内容
+######注入或替换内容
 把指定的内容添加到请求内容前面(GET等请求没有内容无法添加)，配置方式：
 ```
 pattern reqPrepend://filepath
 ```
-#####限速或者延迟请求
+######限速或者延迟请求
 延迟请求
 ```
 pattern reqDelay://timeMS
@@ -415,14 +426,14 @@ pattern reqSpeed://kbs
 www.jd.com reqSpeed://3
 ```
 
-#####修改相应状态码
+######修改相应状态码
 设置响应状态码(状态码范围100~999)，请求会直接根据设置的状态码返回，不会请求到线上，配置方式：
 
 ```
 pattern statusCode://code
 jd.com statusCode://404
 ```
-#####修改响应头
+######修改响应头
 
 方式同请求头
 
@@ -431,14 +442,15 @@ jd.com statusCode://404
 把指定的内容替换响应内容(304等响应没有内容无法替换)，配置方式：
 ```
 pattern resBody://filepath
-www.jd.com resBody://{test-resBody.html}
+st.360buyimg.com/m/css/2014/layout/layout2015.css resBody://{myAppend.css}
 ```
+
 #####注入或者替换内容
 把指定的内容追加到响应内容后面(304等响应没有内容无法追加)，配置方式：
 
 ```
 pattern resAppend://filepath
-www.jd.com resAppend://{test-resAppend.html}
+st.360buyimg.com/m/css/2014/layout/layout2015.css resAppend://{myAppend.css}
 ```
 
 #####限制速度或延迟响应
@@ -458,13 +470,16 @@ www.jd.com resSpeed://3
 
 有些很少用的功能，及一些跟业务相关的功能，考虑到会导致安装过程比较长或者占用内存空间或者适应范围比较小，whistle没有把这些功能加进去，但提供了插件的方式扩展这些功能。whistle本身就是一个Node模块，只需要按照whistle.xxx的形式命名即可。
 
-编写whistle插件：http://wproxy.org/whistle/plugins.html
+编写whistle插件：[如何编写插件](http://wproxy.org/whistle/plugins.html)
 
-官方提供的插件列表：https://github.com/whistle-plugins
+官方提供的插件列表：[官方插件列表](https://github.com/whistle-plugins)
 
 #### socket和websocket
 
 [利用whistle调试socket和webscoket](http://imweb.io/topic/5a11b1b8ef79bc941c30d91a)
 
 
+测试用的文件：[whistle-test-files](whistle-test)
+
+测试用的rules: [rules](rules_20180516162810433.txt)
 

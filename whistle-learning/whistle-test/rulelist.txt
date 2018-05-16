@@ -1,0 +1,5 @@
+# rules
+
+www.jd.com weibo.com
+m.jd.com sina.com
+mc.jd.com taobao.com
