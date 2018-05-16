@@ -1,6 +1,6 @@
 # whistle--跨平台网络抓包调试工具
 
-![whistle](media/15162669035942/15259362357029.png)
+![whistle](http://7xiqdg.com1.z0.glb.clouddn.com/15259362357029.png)
 
 
 [TOC]
@@ -130,7 +130,7 @@ w2 run
 ## 如何使用
 
 通过`w2 start`启动后，访问http://local.whistlejs.com 即可打开whistle界面。
-![图片](media/15162669035942/15204233854650.jpg)
+![图片](http://7xiqdg.com1.z0.glb.clouddn.com/15204233854650.jpg)
 
 所有通过whistle的篡改操作，都可以用过下面的配置方式实现
 
@@ -171,7 +171,7 @@ PS; {value} 则对应工具栏Values下的文件
 
 ## 功能详解
 whistle功能概括：
-![](media/15162669035942/15259409497970.png)
+![](http://7xiqdg.com1.z0.glb.clouddn.com/15259409497970.png)
 
 
 
@@ -228,7 +228,7 @@ localhost:6060/bb host://10.8.43.82:8081
 
 如果要拦截https和websockets请求，必须安装根证书和开启https拦截。
 
-![下载根证书](media/15162669035942/15234431596108.gif)
+![下载根证书](http://7xiqdg.com1.z0.glb.clouddn.com/15234431596108.gif)
 
 在工具栏=>https 下载 RootCA, 并勾选 `intercept HTTPS CONNECTs` 选项
 
@@ -246,7 +246,7 @@ PS: 如果配置完代理，手机无法访问，可能是whistle所在的电脑
 
 whistle集成了weinre的功能，只需要简单配置`pattern weinre://id`即可使用。
 
-![weinre in whistle](media/15162669035942/15234306853141.gif)
+![weinre in whistle](http://7xiqdg.com1.z0.glb.clouddn.com/15234306853141.gif)
 
 然后点击工具栏的weinre，选择对应的ID打开weinre界面
 
@@ -272,7 +272,7 @@ www.jd.com log://D:\xxx\test.js
 www.jd.com log://{log-test.js}
 ```
 
-![log-test](media/15162669035942/15239363346151.jpg)
+![log-test](http://7xiqdg.com1.z0.glb.clouddn.com/15239363346151.jpg)
 
 ######2.查看、修改页面的DOM和样式
 
@@ -282,7 +282,7 @@ www.jd.com log://{log-test.js}
 ```
 m.jd.com weinre://test-weinre
 ```
-![test-weinre](media/15162669035942/15239373901685.jpg)
+![test-weinre](http://7xiqdg.com1.z0.glb.clouddn.com/15239373901685.jpg)
 
 
 ######3. 暂不支持debug功能,可以通过log来替代
@@ -307,18 +307,18 @@ demo: [vConsole](http://wechatfe.github.io/vconsole/demo.html)
 
 在network中可以看到每条请求的详细情况。
 
-![network](media/15162669035942/15239485540063.jpg)
+![network](http://7xiqdg.com1.z0.glb.clouddn.com/15239485540063.jpg)
 
 ##### 重放请求
 
 打开network ==> 选中请求 ==> 右键选择replay
 
-![replay-w433](media/15162669035942/15239478785805.jpg)
+![replay-w433](http://7xiqdg.com1.z0.glb.clouddn.com/15239478785805.jpg)
 
 *重构请求*
 
 可以自定义请求的URL、请求方法、请求头，请求内容
-![Composer](media/15162669035942/15239497324966.gif)
+![Composer](http://7xiqdg.com1.z0.glb.clouddn.com/15239497324966.gif)
 
 
 ##### 请求和响应修改
